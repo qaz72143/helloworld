@@ -17,3 +17,8 @@ jobs:
       run: gcc helloworld.c -o myapp
     - name: make check
       run: ./myapp
+    - name: 部署並儲存執行檔 (CD)
+      uses: actions/upload-artifact@v4
+      with:
+        name: helloworld-binary
+        path: myapp
